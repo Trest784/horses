@@ -15,6 +15,7 @@
 
 # задача
 # разделить на пары
+import random
 
 list_playoff = ["arsenal","psv","mu","villereal","barcelona","borussia","milan","portu"]
 substring_1 = list_playoff[0]
@@ -25,17 +26,24 @@ substring_5 = list_playoff[4]
 substring_6 = list_playoff[5]
 substring_7 = list_playoff[6]
 substring_8 = list_playoff[7]
-print(substring_1 , substring_6)
-print("interesno")
+# print(substring_1 , substring_6)
+# print("interesno")
 
-print(substring_2,substring_7)
-print("milan", "smotritsa", "favoritom")
+for i in range(len(list_playoff) // 2):
+    first_team = random.choice(list_playoff)
+    list_playoff.remove(first_team)
+    second_team = random.choice(list_playoff)
+    list_playoff.remove(second_team)
+    print(first_team, ' - ', second_team)
 
-print(substring_3,substring_5)
-print("eto", "razriv", "samaya", "gromkaya", "viveska")
+# print(substring_2,substring_7)
+# print("milan", "smotritsa", "favoritom")
 
-print(substring_4,substring_8)
-print("vsem","interesno","4to","pridumal","Emery")
+# print(substring_3,substring_5)
+# print("eto", "razriv", "samaya", "gromkaya", "viveska")
+
+# print(substring_4,substring_8)
+# print("vsem","interesno","4to","pridumal","Emery")
 
 # вопросы
 # 1. оптимальное ли решения по слайсингу я выбрал или можно было более короткое решение?
