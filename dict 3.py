@@ -92,4 +92,4 @@ for x in f:
 # print(temp)
 x = ''.join(('ya', 'vldm', 'vlamrch'))
 print(x)
-
+# split
