@@ -59,7 +59,7 @@ def list_sum(a, b, first_index_a=0, second_index_a=-1, first_index_b=0, second_i
     return [a[first_index_a:second_index_a]] + [b[first_index_b:second_index_b]]
 
 
-print(list_sum(a, b, second_index_b=2))
+# print(list_sum(a, b, second_index_b=2))
 
 
 
