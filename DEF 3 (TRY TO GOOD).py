@@ -2,30 +2,31 @@
 # написать поля для крестики нолики
 
 # def draw_boards():
-#     print
-#     "-------------"
+#     print("-------------")
 #     for i in range(3):
-#         print
-#         "|", board[0 + i * 3], "|", board[1 + i * 3], "|", board[2 + i * 3], "|"
-#         print
-#         "-------------"
+#         print("|", board[0 + i * 3], "|", board[1 + i * 3], "|", board[2 + i * 3], "|")
+#         print("-------------")
+#
+#
+# draw_boards()
 
-
-# def draw_boards():
 
 # вот что не так что за пиздос почему он не фурычит
 # при том что этот код борда разберем так как у меня самому написать не получилось я списал
 
 
-
-# def position(): почему он выдает ошибку
-# a = ['pique','arauho','dest','semedo']
-#     for i in a:
-#     i = "defend"
-#     print(i)
+a = ['pique','arauho','dest','semedo']
+other_list = ['asd', 'dks', 'fgh']
 
 
-# def position():
+def position(arg, last_index=1, mult=10):
+    return mult * arg[-last_index]
+
+# print('pre func')
+last_a = position(a, mult=2)
+last_other_list = position(other_list, 2, mult=100)
+print(last_a, last_other_list)
+print( position( [1, 3, 4, 6], 3) )
 
 # почему выдает ошибку аж в 21 строке там же нет ошибки (я менял строку нечего не получилось)
 

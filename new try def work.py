@@ -8,13 +8,13 @@ G = 'green'
 P = 'pink'
 Y = 'yellow'
 
-
-def colors_clubs():
-    milan = milan_colors
-    nant = nant_colors
-    sevilla = sevilla_colors
-    rangers = rangers_colors
-    return milan, nant, sevilla, rangers
+def colors_clubs(clr1, clr2, clr3, clr4, clr5, clr6, clr7):
+    milan_res = milan(clr1, clr2)
+    nant_res = nant(clr5, clr7)
+    sevilla_res = sevilla(clr1, clr3)
+    rangers_res = rangers(clr4, clr3)
+    palermo = clr6 + clr2
+    return milan_res, nant_res, sevilla_res, rangers_res, palermo
 
 
 def milan(R,BLC):
@@ -36,8 +36,11 @@ def rangers(B,W):
     rangers_colors = B + W
     return rangers_colors
 
-print(milan,nant,sevilla,rangers)
-colors_clubs()
+
+
+
+
+print(colors_clubs(R, BLC, W, B, G, P, Y))
 
 #час сижу не могу решение найти он мне просто сейчас выдает что где лежит и все не какого толку
 
@@ -52,7 +55,7 @@ b = 'v'
 c = 'stakane'
 d = 'stoyt na stole'
 
-def aqua(rom, cola):
+def aqua(arg1, arg2, arg3, arg4):
     rom = posuda(a, b, c)
     cola = kuhnya(a, b, c, d)
     return rom, cola
@@ -68,7 +71,7 @@ def kuhnya(a, b, c, d):
     return kuhnya
 
 
-print(aqua(rom, cola))
+# print(aqua(a, b, c, d))
 
 # я не понимаю в чем ошибка ебанный в рот
 # у каждой переменной есть свои аргументы, в чем ебучая проблема почему так

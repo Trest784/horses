@@ -3,16 +3,19 @@
 afk_list = [22,22,33,45,33,1,2,8,6,77,77]
 
 
-def function(afk_list):
-    a = [i*2 for i in afk_list]
+def function(baza):
+    a = [i*2 for i in baza]
     return a
 
 
 b = function(afk_list)
-print(b)
+print(b[1:3])
 
 # по содержанию бред, но весь синтаксис и логика сделаны правильно как я понимаю?
 # попробую сделать
+
+
+
 
 
 afk_list = [22,22,33,45,33,1,2,8,6,77,77]
@@ -21,9 +24,10 @@ afk_list = [22,22,33,45,33,1,2,8,6,77,77]
 def function(afk_list):
     a = [i*2 for i in afk_list]
     print(a)
+    return a
 
+# x = function(afk_list)
 
-function(afk_list)
 
 # то же самое,но более лаконично и более коротко
 
@@ -46,11 +50,13 @@ def function(afk_list):
 
 alf = int(input("enter the number"))
 
-def control(alf):
-    if alf == 6:
+
+def control(var):
+    if var == 6:
         return True
-    elif alf != 6:
+    else:
         return False
+
 
 res = control(alf)
 print(res)

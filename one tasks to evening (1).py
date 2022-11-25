@@ -26,6 +26,7 @@ def concretica():
     d = f.values()
     print(d)
 
+
 def concretica()
 
 # он дает оштбку синтакисиса но я хоть убей не понимаю в чем дело

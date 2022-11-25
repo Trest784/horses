@@ -171,7 +171,7 @@ def citata(fraza):
 # их решение
 
 # def unique_list(l):
-#     x = []                 не могу понять сути этой строчки 
+#     x = []                 не могу понять сути этой строчки
 #     for a in l:
 #         if a not in x:
 #             x.append(a)
