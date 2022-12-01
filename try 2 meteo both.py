@@ -3,7 +3,6 @@ from pprint import pprint
 from confiq_meteo import open_weather_token
 from confiq_meteo import token_bot
 
-
 class Exception:
     pass
 

@@ -1,26 +1,20 @@
 import requests
-from confiq_meteo import token_bot, open_weather_token
 from aiogram import Bot, types
 from aiogram.dispatcher import Dispatcher
 from aiogram.utils import executor
-from aiogram.types import message
+from confiq_meteo import token_bot, open_weather_token
 
 bot = Bot(token=token_bot)
 dp = Dispatcher(bot)
+
 
 @dp.message_handler(commands=["start"])
 async def start_command(message: types.Message):
     await message.reply("Привет! Напиши мне город и я пришлю погоду")
 
+
 @dp.message_handler(commands=["start"])
 async def get_weather(message:types.Message):
-
-
-    if __name__ == '__main__':
-        executor.start_polling(dp)
-
-
-
 
     try:
         r = requests.get(
@@ -28,12 +22,12 @@ async def get_weather(message:types.Message):
         )
         data = r.json()
 
-
         city = data["name"]
         cur_weather = data["main"]["temp"]
         humidity = data["main"]["temp"]
         pressure = data["main"]["pressure"]
         wind = data["wind"]["speed"]
+
 
         await message.reply(
               f"Погода в городе:{city}\nТемпература:{cur_weather}C\n"
@@ -43,3 +37,10 @@ async def get_weather(message:types.Message):
 
     except:
         await message.reply("проверьте название города")
+
+
+
+
+if __name__ == '__main__':
+    executor.start_polling(dp)
+
